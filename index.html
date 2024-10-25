@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="styesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+        }
+
+        body {
+            background-image: url("Snapinsta.app_461990840_876241184639418_384122920702315043_n_1080.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column ;
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-weight: 100;
+            font-style: normal;
+            justify-content: center;
+            align-items: center;
+            color: white;
+
+        }
+
+        input[type=text], select, input[type=number], input[type=email], textarea {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type=submit] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+
+        form {
+            width: 50%;
+            background-color: rgba(22, 22, 22, 0.748);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        header {
+            text-align: center;
+            
+        }
+
+        h1 {
+            font-size: 40px;
+            font-weight: 500;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <br><br>
+        <h1>Mindcraft Survey Form</h1>
+        <h3>Thank you for taking the time to help us improve the center</h3><br>
+    </header>
+    <form class="form">
+        <label>Name</label><br>
+        <input type="text" placeholder="Enter your name" class="name">
+        <br><br>
+        <label>Email</label><br>
+        <input type="email" placeholder="Enter your email" class="email">
+        <br><br>
+        <label>Age ( optional )</label><br>
+        <input type="number" placeholder="Age" class="age">
+        <br><br>
+
+        <!-- Role: -->
+        <label for="role">Which option best describes your current role?</label><br>
+        <select name="role" class="role" required>
+            <option disabled selected value>Select your current role</option>
+            <option value="student">Student</option>
+            <option value="full_time_job">Full Time Job</option>
+            <option value="full_time_learner">Full Time Learner</option>
+            <option value="prefer_not_to_say">Prefer not to say</option>
+            <option value="other_role">Other</option>
+        </select>
+ 
+        <br><br>
+        <!-- Recommend Mindcraft? -->
+        <label>Would you recommend Mindcraft to a friend?</label><br>
+        <input id="definitely" type="radio" name="recommend" value="Definitely">
+        <label for="definitely">Definitely</label><br>
+        <input id="maybe" type="radio" name="recommend" value="Maybe">
+        <label for="maybe">Maybe</label><br>
+        <input id="not_sure" type="radio" name="recommend" value="Not Sure">
+        <label for="not_sure">Not Sure</label>
+        <br><br>
+
+        <!-- favorite features: -->
+        <label for="features">What is your favorite feature of Mindcraft?</label><br>
+        <select name="feature" class="feature" required>
+            <option disabled selected value>Select an option</option>
+            <option value="chalenges">Challenges</option>
+            <option value="projects">Projects</option>
+            <option value="community">Community</option>
+            <option value="open_source">Open Source</option>
+        </select>
+        <br><br>
+
+        <!-- Courses -->
+        <label>What courses did you like the most?</label><br>
+        <input id="av" type="checkbox" name="courses" value="AV">
+        <label for="av">AV</label><br>
+        <input id="science_lab" type="checkbox" name="courses" value="science lab">
+        <label for="science_lab">Science Lab</label><br>
+        <input id="Robotics" type="checkbox" name="courses" value="robotics">
+        <label for="Robotics">Robotics</label><br>
+        <input id="development" type="checkbox" name="courses" value="development">
+        <label for="development">Development</label><br>
+        <input id="3D" type="checkbox" name="courses" value="3D">
+        <label for="3D">3D</label>
+        <br><br>
+
+        <!-- Comments: -->
+        <label>Any comments or suggestions?</label><br>
+        <textarea id="comments" rows="4" cols="50" placeholder="Enter your comment here"></textarea>
+        <br>
+
+        <input type="submit" id="submit" value="Submit">
+
+
+
+
+    </form>
+</body>
+</html>
