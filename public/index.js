@@ -86,12 +86,36 @@ document.addEventListener('DOMContentLoaded', function () {
             roleError.textContent = '';
         }
 
-        input.addEventListener('input', function () {
-            roleError.textContent = '';
-        });
-        // resetError(none, roleError);
+        
+        if (isValid) {
+            const formData = {
+                name: name.value,
+                email: email.value,
+                role: role.value,
+            }
+        };
 
+        try {
+            const response = await fetch("/api/v1/survey", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formData),
+            });
 
-
+            if (response.ok) {
+                const result = await response.json();
+                alert("Form submitted successfully!");
+                form.reset();
+                console.log(result);
+            } else {
+                const errorResult = await response.json();
+                alert("Failed to submit the form! " + errorResult.message);
+            } 
+        } catch (error) {
+            console.error("Error submitting the form:", error);
+            alert("There was an error submitting the form.");
+        }
     });
 })
